@@ -5,26 +5,30 @@ import enums.TransactionType;
 public abstract class Transaction {
 
     private String description;
-    private Double amount;
-    private TransactionType type;
+    private double amount;
+    private enums.TransactionType type;
 
-    public Transaction(Double amount, String description, TransactionType type) {
-        this.amount = amount;
+    public Transaction(String description, double amount, TransactionType type) {
         this.description = description;
+        this.amount = amount;
         this.type = type;
-    }
-
-    public Double getAmount() {
-        return amount;
     }
 
     public String getDescription() {
         return description;
     }
 
+    public double getAmount() {
+        return amount;
+    }
+
     public TransactionType getType() {
         return type;
     }
 
-    public abstract double getSignedAccount ();
+    @Override
+    public String toString() {
+        return type + " - " + description + " - " + amount;
+    }
 }
+

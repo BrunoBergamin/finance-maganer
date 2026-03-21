@@ -2,13 +2,9 @@ package entities;
 
 import enums.TransactionType;
 
-public class Income extends Transaction{
-    public Income(Double amount, String description) {
-        super(amount, description, TransactionType.INCOME);
-    }
+public class Income extends Transaction {
 
-    @Override
-    public double getSignedAccount() {
-        return getAmount();
+    public Income(String description, double amount) {
+        super(description, amount, TransactionType.INCOME);
     }
 }

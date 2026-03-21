@@ -1,35 +1,39 @@
 package services;
 
+import entities.Expense;
+import entities.Income;
 import entities.Transaction;
-import enums.TransactionType;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FinanceService {
 
-    private List<Transaction> transactionList = new ArrayList<>();
+    List<Transaction> list = new ArrayList<>();
 
-
-    public void addTransactionList (Transaction t){
-        transactionList.add(t);
+    public void addIncome(double amount, String description) {
+        Income income = new Income(description, amount);
+        list.add(income);
     }
-    public double calcBalance() {
-        double balance = 0;
 
-        for (Transaction t : transactionList) {
-                balance += t.getSignedAccount();
+    public void addExpense(double amount, String description) {
+        Expense expense = new Expense(description, amount);
+        list.add(expense);
+    }
+
+    public double calculateBalance() {
+        double balance = 0.0;
+        for (Transaction transaction : list) {
+            if (transaction.getType().name().equals("INCOME")) {
+                balance += transaction.getAmount();
+            } else {
+                balance -= transaction.getAmount();
             }
+        }
         return balance;
     }
 
-    public void listTransactions(){
-        for (Transaction t : transactionList){
-            System.out.println(
-                    t.getType() + " - " +
-                    t.getDescription() + " R$ " +
-                    t.getAmount()
-            );
-        }
+    public List<Transaction> getAllList() {
+            return list;
     }
 }
