@@ -1,10 +1,12 @@
 # Finance Manager em Java
 
+Status: projeto de pratica em Java puro.
+
 Projeto de console desenvolvido em Java para praticar Programacao Orientada a Objetos, simulando um sistema simples de controle financeiro com receitas, despesas e calculo de saldo.
 
 ## Visao geral
 
-Este projeto foi criado para consolidar fundamentos importantes de backend e modelagem orientada a objetos, com uma estrutura separada por camadas e responsabilidades.
+Este projeto foi criado como pratica de Java puro, com foco em organizar melhor o codigo em camadas simples e treinar regras basicas de negocio no console.
 
 ## Funcionalidades
 
@@ -51,6 +53,21 @@ src/app/Program.java
 ## Objetivo do repositorio
 
 Praticar estrutura de projeto em Java e construir uma base para evoluir, no futuro, para uma aplicacao com persistencia de dados e talvez uma API REST.
+
+## O que este projeto mostra no codigo
+
+- menu de console para interacao
+- validacao simples de entrada
+- armazenamento em memoria com lista
+- calculo de saldo a partir do tipo de transacao
+- separacao inicial entre UI, service, entities e enum
+
+## Limitacoes atuais
+
+- os dados ficam apenas em memoria
+- nao ha persistencia em banco ou arquivo
+- nao ha testes automatizados
+- o foco e pratica e consolidacao de base, nao um sistema completo
 
 ## Melhorias futuras
 
