@@ -1,97 +1,69 @@
-# 💰 Sistema Financeiro em Java (Console)
+# Finance Manager em Java
 
-Projeto desenvolvido com foco em **aprendizado prático de Java e Programação Orientada a Objetos (POO)**, simulando um sistema simples de controle financeiro.
+Projeto de console desenvolvido em Java para praticar Programacao Orientada a Objetos, simulando um sistema simples de controle financeiro com receitas, despesas e calculo de saldo.
 
----
+## Visao geral
 
-## 📌 Objetivo
+Este projeto foi criado para consolidar fundamentos importantes de backend e modelagem orientada a objetos, com uma estrutura separada por camadas e responsabilidades.
 
-Este projeto foi criado para consolidar conceitos fundamentais de desenvolvimento backend, incluindo:
+## Funcionalidades
 
-* Estruturação de código em camadas (entities, services, enums)
-* Uso de herança e classes abstratas
-* Manipulação de listas (`ArrayList`)
-* Entrada de dados via console
-* Organização de lógica de negócio
+- cadastrar receitas
+- cadastrar despesas
+- listar transacoes registradas
+- calcular saldo total
+- navegar por um menu interativo no console
 
----
+## Conceitos aplicados
 
-## 🧠 Conceitos aplicados
+- heranca com `Transaction`, `Income` e `Expense`
+- uso de `enum` para tipo de transacao
+- separacao entre entidades, servicos e interface
+- manipulacao de colecoes com `ArrayList`
+- logica de negocio fora da camada de entrada e saida
 
-* **Programação Orientada a Objetos (POO)**
+## Estrutura do projeto
 
-  * Herança (`Transaction`, `Income`, `Expense`)
-  * Encapsulamento
-  * Abstração
-* **Enum** para definição de tipos de transação
-* **Separação de responsabilidades**
-* **Lógica de negócio em camada de serviço**
-
----
-
-## ⚙️ Funcionalidades
-
-* ➕ Adicionar transações (Receitas e Despesas)
-* 📋 Listar todas as transações registradas
-* 💵 Calcular saldo total automaticamente
-* 🔁 Sistema interativo via menu no console
-
----
-
-## 🧱 Estrutura do Projeto
-
-```
+```text
 src/
- ├── entities/
- │     ├── Transaction.java
- │     ├── Income.java
- │     └── Expense.java
- │
- ├── enums/
- │     └── TransactionType.java
- │
- ├── services/
- │     └── FinanceService.java
- │
- └── Main.java
+|-- app/
+|   `-- Program.java
+|-- entities/
+|   |-- Transaction.java
+|   |-- Income.java
+|   `-- Expense.java
+|-- enums/
+|   `-- TransactionType.java
+|-- services/
+|   `-- FinanceService.java
+`-- Ui/
+    `-- FinanceUi.java
 ```
 
----
+## Como executar
 
-## 🚀 Como executar
+O jeito mais simples e abrir o projeto na IDE e executar:
 
-1. Compile o projeto:
-
-```
-javac Main.java
+```text
+src/app/Program.java
 ```
 
-2. Execute:
+## Objetivo do repositorio
 
-```
-java Main
-```
+Praticar estrutura de projeto em Java e construir uma base para evoluir, no futuro, para uma aplicacao com persistencia de dados e talvez uma API REST.
 
----
+## Melhorias futuras
 
-## 📈 Próximos passos (em evolução)
+- persistencia em arquivo ou banco de dados
+- edicao e remocao de transacoes
+- filtros por tipo ou periodo
+- separacao por contas ou categorias
+- evolucao para Spring Boot
 
-Este projeto faz parte de uma evolução contínua. Próximas melhorias planejadas:
+## Observacao importante
 
-* Aplicação de **polimorfismo no cálculo de saldo**
-* Criação de uma entidade `Account`
-* Persistência de dados (arquivo ou banco de dados)
-* Evolução para API REST com **Spring Boot**
+O nome atual do repositorio continua como `finance-maganer`, mas o projeto representa um estudo de `Finance Manager` em Java.
 
----
+## Autor
 
-## 📚 Status
-
-🚧 Em desenvolvimento contínuo — projeto de estudo com evolução diária.
-
----
-
-## 👨‍💻 Autor
-
-Desenvolvido por **Bruno Bergamin**
-Foco em desenvolvimento backend Java e evolução para o mercado profissional.
+Projeto desenvolvido por Bruno Bergamin como exercicio de Java e POO.
